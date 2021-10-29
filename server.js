@@ -5,10 +5,13 @@ TODO:
 
 const express = require('express')
 const app = express()
+
+require('dotenv').config()
+
 const port = process.env.PORT || 5000
 
 const { MongoClient } = require('mongodb')
-const uri = "mongodb+srv://dbUser:admin@cluster0.idgrr.mongodb.net/climbing_tracker?retryWrites=true&w=majority"
+const uri = process.env.URI
 const client = new MongoClient(uri)
 
 async function findClimb(client, nameOfClimb) {
