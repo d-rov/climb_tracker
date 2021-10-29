@@ -53,11 +53,6 @@ class App extends React.Component {
     //axios.post()
   }
 
-  // fucntions handleChangeName and handleChangeClimb can be combined
-  // handleChangeName = (event) => {
-  //   this.setState({ name: event.target.value })
-  // }
-
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
