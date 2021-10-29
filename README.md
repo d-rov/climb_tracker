@@ -3,6 +3,7 @@
 ## TODOS:
 
 - Backend
+  - create POST to add climb to db
 
 - Frontend
   - finish POST
