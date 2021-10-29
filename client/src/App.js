@@ -13,7 +13,7 @@ class App extends React.Component {
   state = {
     connect: null,
     data: [],
-    name: '',
+    inputName: '',
     climbName: '',
     climbType: '',
     climbGrade: ''
@@ -29,7 +29,7 @@ class App extends React.Component {
   // makes an axios .get() request with this.state.name
   getByName = async (event) => {
     event.preventDefault()
-    const byName = this.state.name
+    const byName = this.state.inputName
     this.setState({ name: '' })
     await axios.get(`/names/?name=${byName}`)
       .then(res => {
@@ -54,11 +54,11 @@ class App extends React.Component {
   }
 
   // fucntions handleChangeName and handleChangeClimb can be combined
-  handleChangeName = (event) => {
-    this.setState({ name: event.target.value })
-  }
+  // handleChangeName = (event) => {
+  //   this.setState({ name: event.target.value })
+  // }
 
-  handleChangeClimb = (e) => {
+  handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
 
@@ -68,7 +68,12 @@ class App extends React.Component {
         <form onSubmit={this.getByName}>
           <label>
             Search by Name:
-            <input type="text" value={this.state.name} onChange={this.handleChangeName} />
+            <input
+              type="text"
+              name="inputName"
+              value={this.state.inputName}
+              onChange={this.handleChange}
+            />
           </label>
           <input type="submit" value="Submit" />
         </form>
@@ -87,7 +92,7 @@ class App extends React.Component {
               type="text"
               name="climbName"
               value={this.state.climbName}
-              onChange={this.handleChangeClimb} 
+              onChange={this.handleChange} 
             />
           </label>
           <label>
@@ -96,7 +101,7 @@ class App extends React.Component {
               type="text"
               name="climbType"
               value={this.state.climbType}
-              onChange={this.handleChangeClimb}
+              onChange={this.handleChange}
             />
           </label>
           <label>
@@ -105,7 +110,7 @@ class App extends React.Component {
               type="text"
               name="climbGrade"
               value={this.state.climbGrade}
-              onChange={this.handleChangeClimb}
+              onChange={this.handleChange}
               />
           </label>
           <input type="submit" value="Submit" />
