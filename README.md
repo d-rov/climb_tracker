@@ -13,6 +13,4 @@
   - [ ] breaking out into multiple pages
 
 * Errors/Bugs
-  - [ ] Proxy error on POST request.  Not sure what causes it but the POST still works
-    - Proxy error: Could not proxy request /favicon.ico from localhost:3000 to http://localhost:5000/.
-See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNRESET).
+  - [ ] https://github.com/d-rov/climb_tracker/issues/1
