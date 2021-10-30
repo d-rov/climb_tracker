@@ -14,6 +14,8 @@ const { MongoClient } = require('mongodb')
 const uri = process.env.URI
 const client = new MongoClient(uri)
 
+app.use(express.json())
+
 async function findClimb(client, nameOfClimb) {
     try {
         await client.connect()
@@ -45,4 +47,14 @@ app.get('/names/', async (req, res) => {
     res.send(message)
 })
 
-// create a POST call
+// TODO: create a POST call
+app.post('/new_climb/', async (req, res) => {
+    try {
+        const newClimb = req.body
+        console.log(newClimb)
+        await client.connect()
+        await client.db("climbing_tracker").collection("climbs").insertOne(newClimb)
+    } finally {
+        client.close()
+    }
+})

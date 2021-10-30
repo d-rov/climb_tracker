@@ -30,7 +30,7 @@ class App extends React.Component {
   getByName = async (event) => {
     event.preventDefault()
     const byName = this.state.inputName
-    this.setState({ name: '' })
+    this.setState({ inputName: '' })
     await axios.get(`/names/?name=${byName}`)
       .then(res => {
         let list = [...this.state.data, res.data]
@@ -50,7 +50,7 @@ class App extends React.Component {
     this.setState({ climbType: '' })
     this.setState({ climbGrade: '' })
     console.log(newClimb)
-    //axios.post()
+    axios.post('/new_climb/', newClimb)
   }
 
   handleChange = (e) => {
