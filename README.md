@@ -9,6 +9,8 @@
   - [ ] finish POST
   - [ ] separate functionality into components
   - [x] combine handleChangeName and handleChangeClimb functions
+  - [ ] styling
+  - [ ] breaking out into multiple pages
 
 * Errors/Bugs
   - [ ] Proxy error on POST request.  Not sure what causes it but the POST still works
