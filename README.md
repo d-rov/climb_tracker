@@ -13,4 +13,4 @@
   - [ ] breaking out into multiple pages
 
 * Errors/Bugs
-  - [ ] https://github.com/d-rov/climb_tracker/issues/1
+  - [ ] #1
