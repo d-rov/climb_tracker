@@ -1,10 +1,3 @@
-/*
-TODO:
-- create a axios.post call to send a new climb to the server
-- separate functionality to different components
-- combine handleChangeName and handleChangeClimb
-*/
-
 import React from 'react'
 import axios from 'axios'
 import './App.css';
@@ -38,7 +31,8 @@ class App extends React.Component {
       })
   }
 
-  // TODO: create axios POST request
+  // axios POST call
+  // adds a new climb to the db
   addAClimb = (event) => {
     event.preventDefault()
     const newClimb = {

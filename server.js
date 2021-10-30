@@ -1,8 +1,3 @@
-/*
-TODO:
-- create a POST call to add a climb to the database
-*/
-
 const express = require('express')
 const app = express()
 
@@ -47,7 +42,6 @@ app.get('/names/', async (req, res) => {
     res.send(message)
 })
 
-// TODO: create a POST call
 app.post('/new_climb/', async (req, res) => {
     try {
         const newClimb = req.body
