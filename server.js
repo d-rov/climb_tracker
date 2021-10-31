@@ -31,6 +31,8 @@ app.listen(port, () => {
     console.log(`listening on port ${port}`)
 })
 
+// test get function
+// delete later during cleanup
 app.get('/express_backend', (req, res) => {
     res.send({ express: "YOUR EXPRESS BACKEND IS UP AND RUNNING" })
 })

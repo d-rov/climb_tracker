@@ -14,6 +14,7 @@ class App extends React.Component {
 
   // initial test call
   // good example of axios .get() call
+  // delete later during cleanup
   callBackendAPI = async () => {
     await axios.get('/express_backend')
       .then(response => {this.setState({ connect: response.data.express })})
