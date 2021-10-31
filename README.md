@@ -13,4 +13,4 @@
   - [ ] breaking out into multiple pages
 
 * Errors/Bugs
-  - [ ] Proxy error: https://github.com/d-rov/climb_tracker/issues/1
+  - [x] Proxy error: https://github.com/d-rov/climb_tracker/issues/1
