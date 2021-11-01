@@ -55,8 +55,19 @@ app.post('/new_climb/', async (req, res) => {
     }
 })
 
-// user POST
 // user GET
+app.get('/users/', async(req, res) => {
+    try {
+        // connect
+        await client.connect()
+        // findOne
+        // return result or lack thereof
+    } finally {
+        client.close()
+    }
+})
+
+// user POST
 // climbs GET all by user
 // climbs GET all in progress by user
 // climbs GET all completed by user
