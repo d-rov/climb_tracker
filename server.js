@@ -60,3 +60,11 @@ app.post('/new_climb/', async (req, res) => {
 // climbs GET all by user
 // climbs GET all in progress by user
 // climbs GET all completed by user
+
+/*
+user = {
+    username,
+    completed: [],
+    inProgress: []
+}
+*/
